@@ -1,0 +1,20 @@
+# Compass-task: systemd unit for compassd
+# /etc/systemd/system/compassd.service
+# Source: https://www.shellhacks.com/systemd-service-file-example/
+
+# TODO: That one would be usefull if we add to each notification an execution timer and
+# we need that when the app will run as a service
+
+[Unit]
+Description=Daily task tracker via notifications
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/run/compass.pid
+Restart=always
+ExecStart=/home/username/tools/task-compass/task-compass 
+ExecStop=/bin/kill -s QUIT $MAINPID
+
+[Install]
+WantedBy=multi-user.target

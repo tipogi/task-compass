@@ -1,0 +1,11 @@
+TODOs (✔/☐)
+
+✔ When we create a new task, generate automatically the id
+✔ Add tasks from the input: Title, body, icon
+☐ Add in the task the runtime property. In that case, we cannot execute as a crontab, it has to be as a service
+
+✔ Create different commands: Add task, init notification, resume (weekly)
+☐ Add month resume, delete task 
+
+✔ Create cronjob to run
+☐ Create a database with sled. A lightweight serverless database
